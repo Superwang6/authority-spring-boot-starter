@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.fudges</groupId>
+    <artifactId>authority-spring-boot-starter</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>authority-spring-boot-starter</name>
+    <description>authority-spring-boot-starter</description>
+
+    <modules>
+        <module>security-authorization-starter</module>
+        <module>reactive-security-authentication-starter</module>
+        <module>security-common</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+
+        <spring-boot.version>3.3.2</spring-boot.version>
+        <security-common.verson>1.0-SNAPSHOT</security-common.verson>
+        <lombok.version>1.18.34</lombok.version>
+        <redission.version>3.45.0</redission.version>
+        <jackson.data.version>2.18.3</jackson.data.version>
+        <hutool.version>5.8.26</hutool.version>
+        <fastjson.version>2.0.56</fastjson.version>
+        <base-common.version>1.0-SNAPSHOT</base-common.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.fudges</groupId>
+                <artifactId>security-common</artifactId>
+                <version>${security-common.verson}</version>
+            </dependency>
+            <!-- redission -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redission.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${jackson.data.version}</version>
+            </dependency>
+            <!-- hutool -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-bom</artifactId>
+                <version>${hutool.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+
+            <!-- mine -->
+            <dependency>
+                <groupId>cn.fudges</groupId>
+                <artifactId>base-common</artifactId>
+                <version>${base-common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.fudges</groupId>
+                <artifactId>security-authorization-starter</artifactId>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.fudges</groupId>
+                <artifactId>reactive-security-authentication-starter</artifactId>
+                <version>${version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
