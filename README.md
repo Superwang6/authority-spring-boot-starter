@@ -1,0 +1,4 @@
+封装了reactive的spring security认证jar包。
+封装了security的授权jar包。
+在网关引入reactive-security-authentication-starter 可以直接支持登录逻辑。
+在内部微服务引入security-authorization-starter 可以支持微服务的接口授权逻辑。
